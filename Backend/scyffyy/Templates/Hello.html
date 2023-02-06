@@ -1,1 +1,7 @@
-<h1>{{output}}</h1>
+<h1>Home</h1>
+
+<form method = "post">  
+    {% csrf_token%}
+    Name: <input type = "text" name = "url" /> 
+    <button type="submit">Submit</button>
+</form>
