@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Scraped Data</title>
+    </head>
+    <body>
+        <h1>Scraped Data</h1>
+        {% if title %}
+            <p><strong>Title:</strong> {{ title }}</p>
+        {% else %}
+            <form method = "post">
+                {%  csrf_token  %}
+                <input type = "text" name = "url" placeholder = "Enter URL">
+                <input type = "submit" value = "Scrape">
+            </form>
+        {% endif %}
+    </body>
+</html>    
